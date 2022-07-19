@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="COMPUTERIZED_STATISTICAL_ROOM2Entities">
+    <EntitySetMapping Name="AcademicQualifications">
+      <EntityTypeMapping TypeName="Model.AcademicQualification">
+        <MappingFragment StoreEntitySet="AcademicQualifications">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="AqNumber" ColumnName="AqNumber" />
+          <ScalarProperty Name="degree" ColumnName="degree" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="DateofAward" ColumnName="DateofAward" />
+          <ScalarProperty Name="Institute" ColumnName="Institute" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="GeneralSpecialization" ColumnName="GeneralSpecialization" />
+          <ScalarProperty Name="SpecificSpecialization" ColumnName="SpecificSpecialization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Assignments">
+      <EntityTypeMapping TypeName="Model.Assignment">
+        <MappingFragment StoreEntitySet="Assignments">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="AssignmentsID" ColumnName="AssignmentsID" />
+          <ScalarProperty Name="Assignmentstype" ColumnName="Assignmentstype" />
+          <ScalarProperty Name="AssignmentsName" ColumnName="AssignmentsName" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Entity" ColumnName="Entity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Awards">
+      <EntityTypeMapping TypeName="Model.Award">
+        <MappingFragment StoreEntitySet="Award">
+          <ScalarProperty Name="AwardId" ColumnName="AwardId" />
+          <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="Model.Book">
+        <MappingFragment StoreEntitySet="Books">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="BookID" ColumnName="BookID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="chapters" ColumnName="chapters" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cases">
+      <EntityTypeMapping TypeName="Model.Case">
+        <MappingFragment StoreEntitySet="Case">
+          <ScalarProperty Name="caseID" ColumnName="caseID" />
+          <ScalarProperty Name="Case1" ColumnName="Case" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Citizenships">
+      <EntityTypeMapping TypeName="Model.Citizenship">
+        <MappingFragment StoreEntitySet="Citizenship">
+          <ScalarProperty Name="CitizenshipNumber" ColumnName="CitizenshipNumber" />
+          <ScalarProperty Name="CitizenshipName" ColumnName="CitizenshipName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classes">
+      <EntityTypeMapping TypeName="Model.Class">
+        <MappingFragment StoreEntitySet="Class">
+          <ScalarProperty Name="classNumber" ColumnName="classNumber" />
+          <ScalarProperty Name="class1" ColumnName="class" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conferencePaperProceedings">
+      <EntityTypeMapping TypeName="Model.conferencePaperProceeding">
+        <MappingFragment StoreEntitySet="conferencePaperProceedings">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="ConferencePaperID" ColumnName="ConferencePaperID" />
+          <ScalarProperty Name="ConferenceType" ColumnName="ConferenceType" />
+          <ScalarProperty Name="Conference" ColumnName="Conference" />
+          <ScalarProperty Name="papeTitle" ColumnName="papeTitle" />
+          <ScalarProperty Name="authors" ColumnName="authors" />
+          <ScalarProperty Name="place" ColumnName="place" />
+          <ScalarProperty Name="from" ColumnName="from" />
+          <ScalarProperty Name="to" ColumnName="to" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Proceeding" ColumnName="Proceeding" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConferenceTypes">
+      <EntityTypeMapping TypeName="Model.ConferenceType">
+        <MappingFragment StoreEntitySet="ConferenceType">
+          <ScalarProperty Name="conferenceTypeid" ColumnName="conferenceTypeid" />
+          <ScalarProperty Name="conferenceType1" ColumnName="conferenceType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Degrees">
+      <EntityTypeMapping TypeName="Model.Degree">
+        <MappingFragment StoreEntitySet="Degree">
+          <ScalarProperty Name="degreeNumber" ColumnName="degreeNumber" />
+          <ScalarProperty Name="degree1" ColumnName="degree" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DissertationsSuperviseds">
+      <EntityTypeMapping TypeName="Model.DissertationsSupervised">
+        <MappingFragment StoreEntitySet="DissertationsSupervised">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="DissertationsSupervisedID" ColumnName="DissertationsSupervisedID" />
+          <ScalarProperty Name="DissertationsSupervisedType" ColumnName="DissertationsSupervisedType" />
+          <ScalarProperty Name="Project_title" ColumnName="Project title" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="institute" ColumnName="institute" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DissertationsSupervisedTypes">
+      <EntityTypeMapping TypeName="Model.DissertationsSupervisedType">
+        <MappingFragment StoreEntitySet="DissertationsSupervisedType">
+          <ScalarProperty Name="DissertationsSupervisedTypeid" ColumnName="DissertationsSupervisedTypeid" />
+          <ScalarProperty Name="DissertationsSupervisedType1" ColumnName="DissertationsSupervisedType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EditionalRoles">
+      <EntityTypeMapping TypeName="Model.EditionalRole">
+        <MappingFragment StoreEntitySet="EditionalRole">
+          <ScalarProperty Name="EditionalRoleID" ColumnName="EditionalRoleID" />
+          <ScalarProperty Name="EditionalRoleType" ColumnName="EditionalRoleType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventAttendeds">
+      <EntityTypeMapping TypeName="Model.EventAttended">
+        <MappingFragment StoreEntitySet="EventAttended">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="EventsAttendedID" ColumnName="EventsAttendedID" />
+          <ScalarProperty Name="EventsAttendedType" ColumnName="EventsAttendedType" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="from" ColumnName="from" />
+          <ScalarProperty Name="to" ColumnName="to" />
+          <ScalarProperty Name="year" ColumnName="year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventsAttendedTypes">
+      <EntityTypeMapping TypeName="Model.EventsAttendedType">
+        <MappingFragment StoreEntitySet="EventsAttendedType">
+          <ScalarProperty Name="EventsAttendedTypeID" ColumnName="EventsAttendedTypeID" />
+          <ScalarProperty Name="EventsAttendedType1" ColumnName="EventsAttendedType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fundings">
+      <EntityTypeMapping TypeName="Model.Funding">
+        <MappingFragment StoreEntitySet="Funding">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="fundingID" ColumnName="fundingID" />
+          <ScalarProperty Name="ResearchTitle" ColumnName="ResearchTitle" />
+          <ScalarProperty Name="Sponser" ColumnName="Sponser" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="FundingNo" ColumnName="FundingNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="Model.Gender">
+        <MappingFragment StoreEntitySet="Gender">
+          <ScalarProperty Name="GenderNumber" ColumnName="GenderNumber" />
+          <ScalarProperty Name="Gender_Type" ColumnName="Gender Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralSpecializations">
+      <EntityTypeMapping TypeName="Model.GeneralSpecialization">
+        <MappingFragment StoreEntitySet="GeneralSpecialization">
+          <ScalarProperty Name="GeneralSpecializationNumber" ColumnName="GeneralSpecializationNumber" />
+          <ScalarProperty Name="GeneralSpecialization1" ColumnName="GeneralSpecialization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HonorsAndAwards">
+      <EntityTypeMapping TypeName="Model.HonorsAndAward">
+        <MappingFragment StoreEntitySet="HonorsAndAwards">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="Award_id" ColumnName="Award id" />
+          <ScalarProperty Name="Award" ColumnName="Award" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvitedLectures">
+      <EntityTypeMapping TypeName="Model.InvitedLecture">
+        <MappingFragment StoreEntitySet="InvitedLecture">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="LectureID" ColumnName="LectureID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="invier" ColumnName="invier" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="levedegreeTypes">
+      <EntityTypeMapping TypeName="Model.levedegreeType">
+        <MappingFragment StoreEntitySet="levedegreeType">
+          <ScalarProperty Name="type_id" ColumnName="type id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LevelDegrees">
+      <EntityTypeMapping TypeName="Model.LevelDegree">
+        <MappingFragment StoreEntitySet="LevelDegree">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="levelDegreeid" ColumnName="levelDegreeid" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="BriefOutlines" ColumnName="BriefOutlines" />
+          <ScalarProperty Name="levedegreeType" ColumnName="levedegreeType" />
+          <ScalarProperty Name="EquivalentCourseCode" ColumnName="EquivalentCourseCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mains">
+      <EntityTypeMapping TypeName="Model.Main">
+        <MappingFragment StoreEntitySet="Main">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Citizenship" ColumnName="Citizenship" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="PlaceofBirth" ColumnName="PlaceofBirth" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactNum" ColumnName="ContactNum" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Web_Page" ColumnName="Web Page" />
+          <ScalarProperty Name="PassportCountry" ColumnName="PassportCountry" />
+          <ScalarProperty Name="PassportNo" ColumnName="PassportNo" />
+          <ScalarProperty Name="WorkCity" ColumnName="WorkCity" />
+          <ScalarProperty Name="FirstDateHirig" ColumnName="FirstDateHirig" />
+          <ScalarProperty Name="FirstDateTabuk" ColumnName="FirstDateTabuk" />
+          <ScalarProperty Name="OffBuidling" ColumnName="OffBuidling" />
+          <ScalarProperty Name="OfficeNo" ColumnName="OfficeNo" />
+          <ScalarProperty Name="OfficeTrNo" ColumnName="OfficeTrNo" />
+          <ScalarProperty Name="ResidenceNationalNo" ColumnName="ResidenceNationalNo" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Docs_certificates_" ColumnName="Docs(certificates)" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaritalStates">
+      <EntityTypeMapping TypeName="Model.MaritalState">
+        <MappingFragment StoreEntitySet="MaritalState">
+          <ScalarProperty Name="MaritalNumber" ColumnName="MaritalNumber" />
+          <ScalarProperty Name="MaritalType" ColumnName="MaritalType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Occupations">
+      <EntityTypeMapping TypeName="Model.Occupation">
+        <MappingFragment StoreEntitySet="Occupation">
+          <ScalarProperty Name="OccupationNumber" ColumnName="OccupationNumber" />
+          <ScalarProperty Name="OccupationName" ColumnName="OccupationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OffBuidlings">
+      <EntityTypeMapping TypeName="Model.OffBuidling">
+        <MappingFragment StoreEntitySet="OffBuidling">
+          <ScalarProperty Name="OffBuidlingID" ColumnName="OffBuidlingID" />
+          <ScalarProperty Name="MaritalType" ColumnName="MaritalType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfessionalAffiliationMemberships">
+      <EntityTypeMapping TypeName="Model.ProfessionalAffiliationMembership">
+        <MappingFragment StoreEntitySet="ProfessionalAffiliationMembership">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="professionalaffiliationidID" ColumnName="professionalaffiliationidID" />
+          <ScalarProperty Name="society" ColumnName="society" />
+          <ScalarProperty Name="from" ColumnName="from" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfessionalExperinces">
+      <EntityTypeMapping TypeName="Model.ProfessionalExperince">
+        <MappingFragment StoreEntitySet="ProfessionalExperince">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="ProfessionalExperianceID" ColumnName="ProfessionalExperianceID" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="orgnization" ColumnName="orgnization" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="occupation" ColumnName="occupation" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProfessionalExperinceType" ColumnName="ProfessionalExperinceType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfessionalExperinceTypes">
+      <EntityTypeMapping TypeName="Model.ProfessionalExperinceType">
+        <MappingFragment StoreEntitySet="ProfessionalExperinceType">
+          <ScalarProperty Name="ProfessionalExperinceTypeID" ColumnName="ProfessionalExperinceTypeID" />
+          <ScalarProperty Name="ProfessionalExperinceType1" ColumnName="ProfessionalExperinceType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Publications">
+      <EntityTypeMapping TypeName="Model.Publication">
+        <MappingFragment StoreEntitySet="Publications">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="PublicationsID" ColumnName="PublicationsID" />
+          <ScalarProperty Name="PublicationsType" ColumnName="PublicationsType" />
+          <ScalarProperty Name="EditionalRole" ColumnName="EditionalRole" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="To" ColumnName="To" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PublicationsInReferredJournals">
+      <EntityTypeMapping TypeName="Model.PublicationsInReferredJournal">
+        <MappingFragment StoreEntitySet="PublicationsInReferredJournals">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="PuplishID" ColumnName="PuplishID" />
+          <ScalarProperty Name="Journal" ColumnName="Journal" />
+          <ScalarProperty Name="ArticleTitle" ColumnName="ArticleTitle" />
+          <ScalarProperty Name="authors" ColumnName="authors" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="pages" ColumnName="pages" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Indexer" ColumnName="Indexer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PublicationsTypes">
+      <EntityTypeMapping TypeName="Model.PublicationsType">
+        <MappingFragment StoreEntitySet="PublicationsType">
+          <ScalarProperty Name="PublicationsTypeID" ColumnName="PublicationsTypeID" />
+          <ScalarProperty Name="PublicationsType1" ColumnName="PublicationsType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Referees">
+      <EntityTypeMapping TypeName="Model.Referee">
+        <MappingFragment StoreEntitySet="Referees">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="RefereeID" ColumnName="RefereeID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Affiliation" ColumnName="Affiliation" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScholarshipCases">
+      <EntityTypeMapping TypeName="Model.ScholarshipCase">
+        <MappingFragment StoreEntitySet="ScholarshipCase">
+          <ScalarProperty Name="ScholarshipCaseId" ColumnName="ScholarshipCaseId" />
+          <ScalarProperty Name="ScholarshipCaseName" ColumnName="ScholarshipCaseName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScholarshipsDetails">
+      <EntityTypeMapping TypeName="Model.ScholarshipsDetail">
+        <MappingFragment StoreEntitySet="ScholarshipsDetails">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="ScholarshipID" ColumnName="ScholarshipID" />
+          <ScalarProperty Name="ScholarshipDegree" ColumnName="ScholarshipDegree" />
+          <ScalarProperty Name="ScholarshipCountry" ColumnName="ScholarshipCountry" />
+          <ScalarProperty Name="GeneralSpecialization" ColumnName="GeneralSpecialization" />
+          <ScalarProperty Name="SpecificSpecialization" ColumnName="SpecificSpecialization" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="ScholarshipLetterNumber" ColumnName="ScholarshipLetterNumber" />
+          <ScalarProperty Name="Case" ColumnName="Case" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="schoolardegrees">
+      <EntityTypeMapping TypeName="Model.schoolardegree">
+        <MappingFragment StoreEntitySet="schoolardegree">
+          <ScalarProperty Name="schoolardegreeID" ColumnName="schoolardegreeID" />
+          <ScalarProperty Name="schoolardegree1" ColumnName="schoolardegree" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="Model.Service">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="ServicesName" ColumnName="ServicesName" />
+          <ScalarProperty Name="Task" ColumnName="Task" />
+          <ScalarProperty Name="ServicesScope" ColumnName="ServicesScope" />
+          <ScalarProperty Name="orgnization" ColumnName="orgnization" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicesScopes">
+      <EntityTypeMapping TypeName="Model.ServicesScope">
+        <MappingFragment StoreEntitySet="ServicesScope">
+          <ScalarProperty Name="ServicesScopeID" ColumnName="ServicesScopeID" />
+          <ScalarProperty Name="ServicesScopeType" ColumnName="ServicesScopeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="societies">
+      <EntityTypeMapping TypeName="Model.society">
+        <MappingFragment StoreEntitySet="society">
+          <ScalarProperty Name="societyID" ColumnName="societyID" />
+          <ScalarProperty Name="societyType" ColumnName="societyType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecificSpecializations">
+      <EntityTypeMapping TypeName="Model.SpecificSpecialization">
+        <MappingFragment StoreEntitySet="SpecificSpecialization">
+          <ScalarProperty Name="SpecificSpecializationNumber" ColumnName="SpecificSpecializationNumber" />
+          <ScalarProperty Name="SpecificSpecialization1" ColumnName="SpecificSpecialization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Model.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Technicalreports">
+      <EntityTypeMapping TypeName="Model.Technicalreport">
+        <MappingFragment StoreEntitySet="Technicalreports">
+          <ScalarProperty Name="StaffMemNum" ColumnName="StaffMemNum" />
+          <ScalarProperty Name="TechnicalReportsID" ColumnName="TechnicalReportsID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Years">
+      <EntityTypeMapping TypeName="Model.Year">
+        <MappingFragment StoreEntitySet="Year">
+          <ScalarProperty Name="yearId" ColumnName="yearId" />
+          <ScalarProperty Name="Year1" ColumnName="Year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

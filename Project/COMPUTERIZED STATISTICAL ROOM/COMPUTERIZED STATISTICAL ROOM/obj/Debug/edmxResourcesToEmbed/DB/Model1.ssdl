@@ -1,0 +1,1344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AcademicQualifications">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="AqNumber" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="AqNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="degree" Type="int" />
+    <Property Name="Class" Type="int" />
+    <Property Name="DateofAward" Type="date" />
+    <Property Name="Institute" Type="nvarchar" MaxLength="60" />
+    <Property Name="Country" Type="int" />
+    <Property Name="Address" Type="nvarchar" MaxLength="60" />
+    <Property Name="GeneralSpecialization" Type="int" />
+    <Property Name="SpecificSpecialization" Type="int" />
+  </EntityType>
+  <EntityType Name="Assignments">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="AssignmentsID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="AssignmentsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Assignmentstype" Type="nvarchar" MaxLength="50" />
+    <Property Name="AssignmentsName" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="Entity" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Award">
+    <Key>
+      <PropertyRef Name="AwardId" />
+    </Key>
+    <Property Name="AwardId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AwardName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Books">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="BookID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="BookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="author" Type="nvarchar" MaxLength="100" />
+    <Property Name="Organization" Type="nvarchar" MaxLength="100" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Publisher" Type="nvarchar" MaxLength="100" />
+    <Property Name="ISBN" Type="nvarchar" MaxLength="100" />
+    <Property Name="chapters" Type="int" />
+  </EntityType>
+  <EntityType Name="Case">
+    <Key>
+      <PropertyRef Name="caseID" />
+    </Key>
+    <Property Name="caseID" Type="int" Nullable="false" />
+    <Property Name="Case" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Citizenship">
+    <Key>
+      <PropertyRef Name="CitizenshipNumber" />
+    </Key>
+    <Property Name="CitizenshipNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CitizenshipName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="classNumber" />
+    </Key>
+    <Property Name="classNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="class" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="conferencePaperProceedings">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="ConferencePaperID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="ConferencePaperID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConferenceType" Type="int" />
+    <Property Name="Conference" Type="nvarchar" MaxLength="80" />
+    <Property Name="papeTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="authors" Type="nvarchar" MaxLength="100" />
+    <Property Name="place" Type="nvarchar" MaxLength="50" />
+    <Property Name="from" Type="date" />
+    <Property Name="to" Type="date" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Proceeding" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ConferenceType">
+    <Key>
+      <PropertyRef Name="conferenceTypeid" />
+    </Key>
+    <Property Name="conferenceTypeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="conferenceType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Degree">
+    <Key>
+      <PropertyRef Name="degreeNumber" />
+    </Key>
+    <Property Name="degreeNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="degree" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DissertationsSupervised">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="DissertationsSupervisedID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="DissertationsSupervisedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DissertationsSupervisedType" Type="int" />
+    <Property Name="Project title" Type="nvarchar" MaxLength="50" />
+    <Property Name="year" Type="int" />
+    <Property Name="institute" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="DissertationsSupervisedType">
+    <Key>
+      <PropertyRef Name="DissertationsSupervisedTypeid" />
+    </Key>
+    <Property Name="DissertationsSupervisedTypeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DissertationsSupervisedType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EditionalRole">
+    <Key>
+      <PropertyRef Name="EditionalRoleID" />
+    </Key>
+    <Property Name="EditionalRoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EditionalRoleType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EventAttended">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="EventsAttendedID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="EventsAttendedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventsAttendedType" Type="int" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Organization" Type="nvarchar" MaxLength="100" />
+    <Property Name="Place" Type="nvarchar" MaxLength="100" />
+    <Property Name="from" Type="date" />
+    <Property Name="to" Type="date" />
+    <Property Name="year" Type="int" />
+  </EntityType>
+  <EntityType Name="EventsAttendedType">
+    <Key>
+      <PropertyRef Name="EventsAttendedTypeID" />
+    </Key>
+    <Property Name="EventsAttendedTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventsAttendedType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Funding">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="fundingID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="fundingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResearchTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="Sponser" Type="nvarchar" MaxLength="100" />
+    <Property Name="year" Type="int" />
+    <Property Name="amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="nvarchar" MaxLength="100" />
+    <Property Name="FundingNo" Type="int" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="GenderNumber" />
+    </Key>
+    <Property Name="GenderNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gender Type" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GeneralSpecialization">
+    <Key>
+      <PropertyRef Name="GeneralSpecializationNumber" />
+    </Key>
+    <Property Name="GeneralSpecializationNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GeneralSpecialization" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HonorsAndAwards">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="Award id" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="Award id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Award" Type="int" />
+    <Property Name="Organization" Type="nvarchar" MaxLength="60" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="InvitedLecture">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="LectureID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="LectureID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="invier" Type="nvarchar" MaxLength="60" />
+    <Property Name="Organization" Type="nvarchar" MaxLength="50" />
+    <Property Name="date" Type="date" />
+  </EntityType>
+  <EntityType Name="levedegreeType">
+    <Key>
+      <PropertyRef Name="type id" />
+    </Key>
+    <Property Name="type id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LevelDegree">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="levelDegreeid" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="levelDegreeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="BriefOutlines" Type="nvarchar" MaxLength="50" />
+    <Property Name="levedegreeType" Type="int" />
+    <Property Name="EquivalentCourseCode" Type="int" />
+  </EntityType>
+  <EntityType Name="Main">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="300" />
+    <Property Name="Citizenship" Type="int" />
+    <Property Name="Occupation" Type="int" />
+    <Property Name="Gender" Type="int" />
+    <Property Name="DateofBirth" Type="date" />
+    <Property Name="PlaceofBirth" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaritalStatus" Type="int" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Web Page" Type="nvarchar" MaxLength="100" />
+    <Property Name="PassportCountry" Type="int" />
+    <Property Name="PassportNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="WorkCity" Type="nvarchar" MaxLength="100" />
+    <Property Name="FirstDateHirig" Type="date" />
+    <Property Name="FirstDateTabuk" Type="date" />
+    <Property Name="OffBuidling" Type="int" />
+    <Property Name="OfficeNo" Type="int" />
+    <Property Name="OfficeTrNo" Type="int" />
+    <Property Name="ResidenceNationalNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Photo" Type="nvarchar(max)" />
+    <Property Name="Docs(certificates)" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="MaritalState">
+    <Key>
+      <PropertyRef Name="MaritalNumber" />
+    </Key>
+    <Property Name="MaritalNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaritalType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Occupation">
+    <Key>
+      <PropertyRef Name="OccupationNumber" />
+    </Key>
+    <Property Name="OccupationNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OccupationName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OffBuidling">
+    <Key>
+      <PropertyRef Name="OffBuidlingID" />
+    </Key>
+    <Property Name="OffBuidlingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaritalType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProfessionalAffiliationMembership">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="professionalaffiliationidID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="professionalaffiliationidID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="society" Type="int" />
+    <Property Name="from" Type="date" />
+  </EntityType>
+  <EntityType Name="ProfessionalExperince">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="ProfessionalExperianceID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="ProfessionalExperianceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="From" Type="date" />
+    <Property Name="To" Type="date" />
+    <Property Name="orgnization" Type="nvarchar" MaxLength="60" />
+    <Property Name="address" Type="nvarchar" MaxLength="100" />
+    <Property Name="Country" Type="int" />
+    <Property Name="occupation" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProfessionalExperinceType" Type="int" />
+  </EntityType>
+  <EntityType Name="ProfessionalExperinceType">
+    <Key>
+      <PropertyRef Name="ProfessionalExperinceTypeID" />
+    </Key>
+    <Property Name="ProfessionalExperinceTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProfessionalExperinceType" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Publications">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="PublicationsID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="PublicationsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PublicationsType" Type="int" />
+    <Property Name="EditionalRole" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="From" Type="date" />
+    <Property Name="To" Type="date" />
+  </EntityType>
+  <EntityType Name="PublicationsInReferredJournals">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="PuplishID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="PuplishID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Journal" Type="nvarchar" MaxLength="50" />
+    <Property Name="ArticleTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="authors" Type="nvarchar" MaxLength="100" />
+    <Property Name="Volume" Type="int" />
+    <Property Name="pages" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Indexer" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PublicationsType">
+    <Key>
+      <PropertyRef Name="PublicationsTypeID" />
+    </Key>
+    <Property Name="PublicationsTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PublicationsType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Referees">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="RefereeID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="RefereeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Position" Type="nvarchar" MaxLength="50" />
+    <Property Name="Affiliation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="ScholarshipCase">
+    <Key>
+      <PropertyRef Name="ScholarshipCaseId" />
+    </Key>
+    <Property Name="ScholarshipCaseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ScholarshipCaseName" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="ScholarshipsDetails">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="ScholarshipID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="ScholarshipID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ScholarshipDegree" Type="int" />
+    <Property Name="ScholarshipCountry" Type="int" />
+    <Property Name="GeneralSpecialization" Type="int" />
+    <Property Name="SpecificSpecialization" Type="int" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="ScholarshipLetterNumber" Type="int" />
+    <Property Name="Case" Type="int" />
+  </EntityType>
+  <EntityType Name="schoolardegree">
+    <Key>
+      <PropertyRef Name="schoolardegreeID" />
+    </Key>
+    <Property Name="schoolardegreeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="schoolardegree" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="ServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServicesName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Task" Type="nvarchar" MaxLength="100" />
+    <Property Name="ServicesScope" Type="int" />
+    <Property Name="orgnization" Type="nvarchar" MaxLength="60" />
+    <Property Name="From" Type="date" />
+    <Property Name="To" Type="date" />
+    <Property Name="description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ServicesScope">
+    <Key>
+      <PropertyRef Name="ServicesScopeID" />
+    </Key>
+    <Property Name="ServicesScopeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServicesScopeType" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="society">
+    <Key>
+      <PropertyRef Name="societyID" />
+    </Key>
+    <Property Name="societyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="societyType" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SpecificSpecialization">
+    <Key>
+      <PropertyRef Name="SpecificSpecializationNumber" />
+    </Key>
+    <Property Name="SpecificSpecializationNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SpecificSpecialization" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Technicalreports">
+    <Key>
+      <PropertyRef Name="StaffMemNum" />
+      <PropertyRef Name="TechnicalReportsID" />
+    </Key>
+    <Property Name="StaffMemNum" Type="int" Nullable="false" />
+    <Property Name="TechnicalReportsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="author" Type="nvarchar" MaxLength="100" />
+    <Property Name="Organization" Type="nvarchar" MaxLength="100" />
+    <Property Name="Year" Type="int" />
+  </EntityType>
+  <EntityType Name="Year">
+    <Key>
+      <PropertyRef Name="yearId" />
+    </Key>
+    <Property Name="yearId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Year" Type="int" />
+  </EntityType>
+  <Association Name="FK_AcademicQualifications_Class">
+    <End Role="Class" Type="Self.Class" Multiplicity="0..1" />
+    <End Role="AcademicQualifications" Type="Self.AcademicQualifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="classNumber" />
+      </Principal>
+      <Dependent Role="AcademicQualifications">
+        <PropertyRef Name="Class" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AcademicQualifications_Degree">
+    <End Role="Degree" Type="Self.Degree" Multiplicity="0..1" />
+    <End Role="AcademicQualifications" Type="Self.AcademicQualifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Degree">
+        <PropertyRef Name="degreeNumber" />
+      </Principal>
+      <Dependent Role="AcademicQualifications">
+        <PropertyRef Name="degree" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AcademicQualifications_GeneralSpecialization">
+    <End Role="GeneralSpecialization" Type="Self.GeneralSpecialization" Multiplicity="0..1" />
+    <End Role="AcademicQualifications" Type="Self.AcademicQualifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GeneralSpecialization">
+        <PropertyRef Name="GeneralSpecializationNumber" />
+      </Principal>
+      <Dependent Role="AcademicQualifications">
+        <PropertyRef Name="GeneralSpecialization" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AcademicQualifications_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="AcademicQualifications" Type="Self.AcademicQualifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="AcademicQualifications">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AcademicQualifications_SpecificSpecialization">
+    <End Role="SpecificSpecialization" Type="Self.SpecificSpecialization" Multiplicity="0..1" />
+    <End Role="AcademicQualifications" Type="Self.AcademicQualifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SpecificSpecialization">
+        <PropertyRef Name="SpecificSpecializationNumber" />
+      </Principal>
+      <Dependent Role="AcademicQualifications">
+        <PropertyRef Name="SpecificSpecialization" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assignments_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="Assignments" Type="Self.Assignments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="Assignments">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Books_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="Books" Type="Self.Books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Books_Year">
+    <End Role="Year" Type="Self.Year" Multiplicity="0..1" />
+    <End Role="Books" Type="Self.Books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="yearId" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="Year" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_conferencePaperProceedings_ConferenceType">
+    <End Role="ConferenceType" Type="Self.ConferenceType" Multiplicity="1" />
+    <End Role="conferencePaperProceedings" Type="Self.conferencePaperProceedings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConferenceType">
+        <PropertyRef Name="conferenceTypeid" />
+      </Principal>
+      <Dependent Role="conferencePaperProceedings">
+        <PropertyRef Name="ConferencePaperID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_conferencePaperProceedings_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="conferencePaperProceedings" Type="Self.conferencePaperProceedings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="conferencePaperProceedings">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_conferencePaperProceedings_Year">
+    <End Role="Year" Type="Self.Year" Multiplicity="0..1" />
+    <End Role="conferencePaperProceedings" Type="Self.conferencePaperProceedings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="yearId" />
+      </Principal>
+      <Dependent Role="conferencePaperProceedings">
+        <PropertyRef Name="Year" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DissertationsSupervised_DissertationsSupervisedType">
+    <End Role="DissertationsSupervisedType" Type="Self.DissertationsSupervisedType" Multiplicity="0..1" />
+    <End Role="DissertationsSupervised" Type="Self.DissertationsSupervised" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DissertationsSupervisedType">
+        <PropertyRef Name="DissertationsSupervisedTypeid" />
+      </Principal>
+      <Dependent Role="DissertationsSupervised">
+        <PropertyRef Name="DissertationsSupervisedType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DissertationsSupervised_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="DissertationsSupervised" Type="Self.DissertationsSupervised" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="DissertationsSupervised">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DissertationsSupervised_Year">
+    <End Role="Year" Type="Self.Year" Multiplicity="0..1" />
+    <End Role="DissertationsSupervised" Type="Self.DissertationsSupervised" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="yearId" />
+      </Principal>
+      <Dependent Role="DissertationsSupervised">
+        <PropertyRef Name="year" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventAttended_EventsAttendedType">
+    <End Role="EventsAttendedType" Type="Self.EventsAttendedType" Multiplicity="0..1" />
+    <End Role="EventAttended" Type="Self.EventAttended" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventsAttendedType">
+        <PropertyRef Name="EventsAttendedTypeID" />
+      </Principal>
+      <Dependent Role="EventAttended">
+        <PropertyRef Name="EventsAttendedType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventAttended_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="EventAttended" Type="Self.EventAttended" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="EventAttended">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventAttended_Year">
+    <End Role="Year" Type="Self.Year" Multiplicity="0..1" />
+    <End Role="EventAttended" Type="Self.EventAttended" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="yearId" />
+      </Principal>
+      <Dependent Role="EventAttended">
+        <PropertyRef Name="year" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Funding_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="Funding" Type="Self.Funding" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="Funding">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Funding_Year">
+    <End Role="Year" Type="Self.Year" Multiplicity="0..1" />
+    <End Role="Funding" Type="Self.Funding" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="yearId" />
+      </Principal>
+      <Dependent Role="Funding">
+        <PropertyRef Name="year" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HonorsAndAwards_Award">
+    <End Role="Award" Type="Self.Award" Multiplicity="0..1" />
+    <End Role="HonorsAndAwards" Type="Self.HonorsAndAwards" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Award">
+        <PropertyRef Name="AwardId" />
+      </Principal>
+      <Dependent Role="HonorsAndAwards">
+        <PropertyRef Name="Award" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HonorsAndAwards_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="HonorsAndAwards" Type="Self.HonorsAndAwards" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="HonorsAndAwards">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HonorsAndAwards_Year">
+    <End Role="Year" Type="Self.Year" Multiplicity="0..1" />
+    <End Role="HonorsAndAwards" Type="Self.HonorsAndAwards" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="yearId" />
+      </Principal>
+      <Dependent Role="HonorsAndAwards">
+        <PropertyRef Name="Year" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvitedLecture_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="InvitedLecture" Type="Self.InvitedLecture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="InvitedLecture">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LevelDegree_levedegreeType">
+    <End Role="levedegreeType" Type="Self.levedegreeType" Multiplicity="0..1" />
+    <End Role="LevelDegree" Type="Self.LevelDegree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="levedegreeType">
+        <PropertyRef Name="type id" />
+      </Principal>
+      <Dependent Role="LevelDegree">
+        <PropertyRef Name="levedegreeType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LevelDegree_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="LevelDegree" Type="Self.LevelDegree" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="LevelDegree">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Main_Citizenship">
+    <End Role="Citizenship" Type="Self.Citizenship" Multiplicity="0..1" />
+    <End Role="Main" Type="Self.Main" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Citizenship">
+        <PropertyRef Name="CitizenshipNumber" />
+      </Principal>
+      <Dependent Role="Main">
+        <PropertyRef Name="Citizenship" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Main_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
+    <End Role="Main" Type="Self.Main" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="GenderNumber" />
+      </Principal>
+      <Dependent Role="Main">
+        <PropertyRef Name="Gender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Main_MaritalState">
+    <End Role="MaritalState" Type="Self.MaritalState" Multiplicity="0..1" />
+    <End Role="Main" Type="Self.Main" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaritalState">
+        <PropertyRef Name="MaritalNumber" />
+      </Principal>
+      <Dependent Role="Main">
+        <PropertyRef Name="MaritalStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Main_Occupation">
+    <End Role="Occupation" Type="Self.Occupation" Multiplicity="0..1" />
+    <End Role="Main" Type="Self.Main" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Occupation">
+        <PropertyRef Name="OccupationNumber" />
+      </Principal>
+      <Dependent Role="Main">
+        <PropertyRef Name="Occupation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Main_OffBuidling">
+    <End Role="OffBuidling" Type="Self.OffBuidling" Multiplicity="0..1" />
+    <End Role="Main" Type="Self.Main" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OffBuidling">
+        <PropertyRef Name="OffBuidlingID" />
+      </Principal>
+      <Dependent Role="Main">
+        <PropertyRef Name="OffBuidling" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProfessionalAffiliationMembership_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="ProfessionalAffiliationMembership" Type="Self.ProfessionalAffiliationMembership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="ProfessionalAffiliationMembership">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProfessionalAffiliationMembership_society">
+    <End Role="society" Type="Self.society" Multiplicity="0..1" />
+    <End Role="ProfessionalAffiliationMembership" Type="Self.ProfessionalAffiliationMembership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="society">
+        <PropertyRef Name="societyID" />
+      </Principal>
+      <Dependent Role="ProfessionalAffiliationMembership">
+        <PropertyRef Name="society" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProfessionalExperince_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="ProfessionalExperince" Type="Self.ProfessionalExperince" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="ProfessionalExperince">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProfessionalExperince_Occupation">
+    <End Role="Occupation" Type="Self.Occupation" Multiplicity="0..1" />
+    <End Role="ProfessionalExperince" Type="Self.ProfessionalExperince" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Occupation">
+        <PropertyRef Name="OccupationNumber" />
+      </Principal>
+      <Dependent Role="ProfessionalExperince">
+        <PropertyRef Name="occupation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProfessionalExperince_ProfessionalExperinceType">
+    <End Role="ProfessionalExperinceType" Type="Self.ProfessionalExperinceType" Multiplicity="0..1" />
+    <End Role="ProfessionalExperince" Type="Self.ProfessionalExperince" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProfessionalExperinceType">
+        <PropertyRef Name="ProfessionalExperinceTypeID" />
+      </Principal>
+      <Dependent Role="ProfessionalExperince">
+        <PropertyRef Name="ProfessionalExperinceType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Publications_EditionalRole1">
+    <End Role="EditionalRole" Type="Self.EditionalRole" Multiplicity="0..1" />
+    <End Role="Publications" Type="Self.Publications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EditionalRole">
+        <PropertyRef Name="EditionalRoleID" />
+      </Principal>
+      <Dependent Role="Publications">
+        <PropertyRef Name="EditionalRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Publications_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="Publications" Type="Self.Publications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="Publications">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Publications_PublicationsType1">
+    <End Role="PublicationsType" Type="Self.PublicationsType" Multiplicity="0..1" />
+    <End Role="Publications" Type="Self.Publications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PublicationsType">
+        <PropertyRef Name="PublicationsTypeID" />
+      </Principal>
+      <Dependent Role="Publications">
+        <PropertyRef Name="PublicationsType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PublicationsInReferredJournals_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="PublicationsInReferredJournals" Type="Self.PublicationsInReferredJournals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="PublicationsInReferredJournals">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PublicationsInReferredJournals_Year">
+    <End Role="Year" Type="Self.Year" Multiplicity="0..1" />
+    <End Role="PublicationsInReferredJournals" Type="Self.PublicationsInReferredJournals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="yearId" />
+      </Principal>
+      <Dependent Role="PublicationsInReferredJournals">
+        <PropertyRef Name="Year" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Referees_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="Referees" Type="Self.Referees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="Referees">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ScholarshipsDetails_Case">
+    <End Role="Case" Type="Self.Case" Multiplicity="0..1" />
+    <End Role="ScholarshipsDetails" Type="Self.ScholarshipsDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="caseID" />
+      </Principal>
+      <Dependent Role="ScholarshipsDetails">
+        <PropertyRef Name="Case" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ScholarshipsDetails_GeneralSpecialization">
+    <End Role="GeneralSpecialization" Type="Self.GeneralSpecialization" Multiplicity="0..1" />
+    <End Role="ScholarshipsDetails" Type="Self.ScholarshipsDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GeneralSpecialization">
+        <PropertyRef Name="GeneralSpecializationNumber" />
+      </Principal>
+      <Dependent Role="ScholarshipsDetails">
+        <PropertyRef Name="GeneralSpecialization" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ScholarshipsDetails_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="ScholarshipsDetails" Type="Self.ScholarshipsDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="ScholarshipsDetails">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ScholarshipsDetails_ScholarshipCase">
+    <End Role="ScholarshipCase" Type="Self.ScholarshipCase" Multiplicity="0..1" />
+    <End Role="ScholarshipsDetails" Type="Self.ScholarshipsDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ScholarshipCase">
+        <PropertyRef Name="ScholarshipCaseId" />
+      </Principal>
+      <Dependent Role="ScholarshipsDetails">
+        <PropertyRef Name="Case" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ScholarshipsDetails_schoolardegree">
+    <End Role="schoolardegree" Type="Self.schoolardegree" Multiplicity="0..1" />
+    <End Role="ScholarshipsDetails" Type="Self.ScholarshipsDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="schoolardegree">
+        <PropertyRef Name="schoolardegreeID" />
+      </Principal>
+      <Dependent Role="ScholarshipsDetails">
+        <PropertyRef Name="ScholarshipDegree" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ScholarshipsDetails_SpecificSpecialization">
+    <End Role="SpecificSpecialization" Type="Self.SpecificSpecialization" Multiplicity="0..1" />
+    <End Role="ScholarshipsDetails" Type="Self.ScholarshipsDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SpecificSpecialization">
+        <PropertyRef Name="SpecificSpecializationNumber" />
+      </Principal>
+      <Dependent Role="ScholarshipsDetails">
+        <PropertyRef Name="SpecificSpecialization" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Services_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="Services" Type="Self.Services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="Services">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Services_ServicesScope">
+    <End Role="ServicesScope" Type="Self.ServicesScope" Multiplicity="0..1" />
+    <End Role="Services" Type="Self.Services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServicesScope">
+        <PropertyRef Name="ServicesScopeID" />
+      </Principal>
+      <Dependent Role="Services">
+        <PropertyRef Name="ServicesScope" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Technicalreports_Main">
+    <End Role="Main" Type="Self.Main" Multiplicity="1" />
+    <End Role="Technicalreports" Type="Self.Technicalreports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Main">
+        <PropertyRef Name="StaffMemNum" />
+      </Principal>
+      <Dependent Role="Technicalreports">
+        <PropertyRef Name="StaffMemNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Technicalreports_Year">
+    <End Role="Year" Type="Self.Year" Multiplicity="0..1" />
+    <End Role="Technicalreports" Type="Self.Technicalreports" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="yearId" />
+      </Principal>
+      <Dependent Role="Technicalreports">
+        <PropertyRef Name="Year" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="AcademicQualifications" EntityType="Self.AcademicQualifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Assignments" EntityType="Self.Assignments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Award" EntityType="Self.Award" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Case" EntityType="Self.Case" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Citizenship" EntityType="Self.Citizenship" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Class" EntityType="Self.Class" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="conferencePaperProceedings" EntityType="Self.conferencePaperProceedings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConferenceType" EntityType="Self.ConferenceType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Degree" EntityType="Self.Degree" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DissertationsSupervised" EntityType="Self.DissertationsSupervised" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DissertationsSupervisedType" EntityType="Self.DissertationsSupervisedType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EditionalRole" EntityType="Self.EditionalRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EventAttended" EntityType="Self.EventAttended" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EventsAttendedType" EntityType="Self.EventsAttendedType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Funding" EntityType="Self.Funding" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GeneralSpecialization" EntityType="Self.GeneralSpecialization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HonorsAndAwards" EntityType="Self.HonorsAndAwards" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvitedLecture" EntityType="Self.InvitedLecture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="levedegreeType" EntityType="Self.levedegreeType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LevelDegree" EntityType="Self.LevelDegree" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Main" EntityType="Self.Main" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaritalState" EntityType="Self.MaritalState" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Occupation" EntityType="Self.Occupation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OffBuidling" EntityType="Self.OffBuidling" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProfessionalAffiliationMembership" EntityType="Self.ProfessionalAffiliationMembership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProfessionalExperince" EntityType="Self.ProfessionalExperince" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProfessionalExperinceType" EntityType="Self.ProfessionalExperinceType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Publications" EntityType="Self.Publications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PublicationsInReferredJournals" EntityType="Self.PublicationsInReferredJournals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PublicationsType" EntityType="Self.PublicationsType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Referees" EntityType="Self.Referees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ScholarshipCase" EntityType="Self.ScholarshipCase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ScholarshipsDetails" EntityType="Self.ScholarshipsDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="schoolardegree" EntityType="Self.schoolardegree" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServicesScope" EntityType="Self.ServicesScope" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="society" EntityType="Self.society" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SpecificSpecialization" EntityType="Self.SpecificSpecialization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Technicalreports" EntityType="Self.Technicalreports" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Year" EntityType="Self.Year" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AcademicQualifications_Class" Association="Self.FK_AcademicQualifications_Class">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="AcademicQualifications" EntitySet="AcademicQualifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AcademicQualifications_Degree" Association="Self.FK_AcademicQualifications_Degree">
+      <End Role="Degree" EntitySet="Degree" />
+      <End Role="AcademicQualifications" EntitySet="AcademicQualifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AcademicQualifications_GeneralSpecialization" Association="Self.FK_AcademicQualifications_GeneralSpecialization">
+      <End Role="GeneralSpecialization" EntitySet="GeneralSpecialization" />
+      <End Role="AcademicQualifications" EntitySet="AcademicQualifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AcademicQualifications_Main" Association="Self.FK_AcademicQualifications_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="AcademicQualifications" EntitySet="AcademicQualifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AcademicQualifications_SpecificSpecialization" Association="Self.FK_AcademicQualifications_SpecificSpecialization">
+      <End Role="SpecificSpecialization" EntitySet="SpecificSpecialization" />
+      <End Role="AcademicQualifications" EntitySet="AcademicQualifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assignments_Main" Association="Self.FK_Assignments_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="Assignments" EntitySet="Assignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Books_Main" Association="Self.FK_Books_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Books_Year" Association="Self.FK_Books_Year">
+      <End Role="Year" EntitySet="Year" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_conferencePaperProceedings_ConferenceType" Association="Self.FK_conferencePaperProceedings_ConferenceType">
+      <End Role="ConferenceType" EntitySet="ConferenceType" />
+      <End Role="conferencePaperProceedings" EntitySet="conferencePaperProceedings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_conferencePaperProceedings_Main" Association="Self.FK_conferencePaperProceedings_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="conferencePaperProceedings" EntitySet="conferencePaperProceedings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_conferencePaperProceedings_Year" Association="Self.FK_conferencePaperProceedings_Year">
+      <End Role="Year" EntitySet="Year" />
+      <End Role="conferencePaperProceedings" EntitySet="conferencePaperProceedings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DissertationsSupervised_DissertationsSupervisedType" Association="Self.FK_DissertationsSupervised_DissertationsSupervisedType">
+      <End Role="DissertationsSupervisedType" EntitySet="DissertationsSupervisedType" />
+      <End Role="DissertationsSupervised" EntitySet="DissertationsSupervised" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DissertationsSupervised_Main" Association="Self.FK_DissertationsSupervised_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="DissertationsSupervised" EntitySet="DissertationsSupervised" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DissertationsSupervised_Year" Association="Self.FK_DissertationsSupervised_Year">
+      <End Role="Year" EntitySet="Year" />
+      <End Role="DissertationsSupervised" EntitySet="DissertationsSupervised" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventAttended_EventsAttendedType" Association="Self.FK_EventAttended_EventsAttendedType">
+      <End Role="EventsAttendedType" EntitySet="EventsAttendedType" />
+      <End Role="EventAttended" EntitySet="EventAttended" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventAttended_Main" Association="Self.FK_EventAttended_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="EventAttended" EntitySet="EventAttended" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventAttended_Year" Association="Self.FK_EventAttended_Year">
+      <End Role="Year" EntitySet="Year" />
+      <End Role="EventAttended" EntitySet="EventAttended" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Funding_Main" Association="Self.FK_Funding_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="Funding" EntitySet="Funding" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Funding_Year" Association="Self.FK_Funding_Year">
+      <End Role="Year" EntitySet="Year" />
+      <End Role="Funding" EntitySet="Funding" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HonorsAndAwards_Award" Association="Self.FK_HonorsAndAwards_Award">
+      <End Role="Award" EntitySet="Award" />
+      <End Role="HonorsAndAwards" EntitySet="HonorsAndAwards" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HonorsAndAwards_Main" Association="Self.FK_HonorsAndAwards_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="HonorsAndAwards" EntitySet="HonorsAndAwards" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HonorsAndAwards_Year" Association="Self.FK_HonorsAndAwards_Year">
+      <End Role="Year" EntitySet="Year" />
+      <End Role="HonorsAndAwards" EntitySet="HonorsAndAwards" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvitedLecture_Main" Association="Self.FK_InvitedLecture_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="InvitedLecture" EntitySet="InvitedLecture" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LevelDegree_levedegreeType" Association="Self.FK_LevelDegree_levedegreeType">
+      <End Role="levedegreeType" EntitySet="levedegreeType" />
+      <End Role="LevelDegree" EntitySet="LevelDegree" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LevelDegree_Main" Association="Self.FK_LevelDegree_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="LevelDegree" EntitySet="LevelDegree" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Main_Citizenship" Association="Self.FK_Main_Citizenship">
+      <End Role="Citizenship" EntitySet="Citizenship" />
+      <End Role="Main" EntitySet="Main" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Main_Gender" Association="Self.FK_Main_Gender">
+      <End Role="Gender" EntitySet="Gender" />
+      <End Role="Main" EntitySet="Main" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Main_MaritalState" Association="Self.FK_Main_MaritalState">
+      <End Role="MaritalState" EntitySet="MaritalState" />
+      <End Role="Main" EntitySet="Main" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Main_Occupation" Association="Self.FK_Main_Occupation">
+      <End Role="Occupation" EntitySet="Occupation" />
+      <End Role="Main" EntitySet="Main" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Main_OffBuidling" Association="Self.FK_Main_OffBuidling">
+      <End Role="OffBuidling" EntitySet="OffBuidling" />
+      <End Role="Main" EntitySet="Main" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProfessionalAffiliationMembership_Main" Association="Self.FK_ProfessionalAffiliationMembership_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="ProfessionalAffiliationMembership" EntitySet="ProfessionalAffiliationMembership" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProfessionalAffiliationMembership_society" Association="Self.FK_ProfessionalAffiliationMembership_society">
+      <End Role="society" EntitySet="society" />
+      <End Role="ProfessionalAffiliationMembership" EntitySet="ProfessionalAffiliationMembership" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProfessionalExperince_Main" Association="Self.FK_ProfessionalExperince_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="ProfessionalExperince" EntitySet="ProfessionalExperince" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProfessionalExperince_Occupation" Association="Self.FK_ProfessionalExperince_Occupation">
+      <End Role="Occupation" EntitySet="Occupation" />
+      <End Role="ProfessionalExperince" EntitySet="ProfessionalExperince" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProfessionalExperince_ProfessionalExperinceType" Association="Self.FK_ProfessionalExperince_ProfessionalExperinceType">
+      <End Role="ProfessionalExperinceType" EntitySet="ProfessionalExperinceType" />
+      <End Role="ProfessionalExperince" EntitySet="ProfessionalExperince" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Publications_EditionalRole1" Association="Self.FK_Publications_EditionalRole1">
+      <End Role="EditionalRole" EntitySet="EditionalRole" />
+      <End Role="Publications" EntitySet="Publications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Publications_Main" Association="Self.FK_Publications_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="Publications" EntitySet="Publications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Publications_PublicationsType1" Association="Self.FK_Publications_PublicationsType1">
+      <End Role="PublicationsType" EntitySet="PublicationsType" />
+      <End Role="Publications" EntitySet="Publications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PublicationsInReferredJournals_Main" Association="Self.FK_PublicationsInReferredJournals_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="PublicationsInReferredJournals" EntitySet="PublicationsInReferredJournals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PublicationsInReferredJournals_Year" Association="Self.FK_PublicationsInReferredJournals_Year">
+      <End Role="Year" EntitySet="Year" />
+      <End Role="PublicationsInReferredJournals" EntitySet="PublicationsInReferredJournals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Referees_Main" Association="Self.FK_Referees_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="Referees" EntitySet="Referees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ScholarshipsDetails_Case" Association="Self.FK_ScholarshipsDetails_Case">
+      <End Role="Case" EntitySet="Case" />
+      <End Role="ScholarshipsDetails" EntitySet="ScholarshipsDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ScholarshipsDetails_GeneralSpecialization" Association="Self.FK_ScholarshipsDetails_GeneralSpecialization">
+      <End Role="GeneralSpecialization" EntitySet="GeneralSpecialization" />
+      <End Role="ScholarshipsDetails" EntitySet="ScholarshipsDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ScholarshipsDetails_Main" Association="Self.FK_ScholarshipsDetails_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="ScholarshipsDetails" EntitySet="ScholarshipsDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ScholarshipsDetails_ScholarshipCase" Association="Self.FK_ScholarshipsDetails_ScholarshipCase">
+      <End Role="ScholarshipCase" EntitySet="ScholarshipCase" />
+      <End Role="ScholarshipsDetails" EntitySet="ScholarshipsDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ScholarshipsDetails_schoolardegree" Association="Self.FK_ScholarshipsDetails_schoolardegree">
+      <End Role="schoolardegree" EntitySet="schoolardegree" />
+      <End Role="ScholarshipsDetails" EntitySet="ScholarshipsDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ScholarshipsDetails_SpecificSpecialization" Association="Self.FK_ScholarshipsDetails_SpecificSpecialization">
+      <End Role="SpecificSpecialization" EntitySet="SpecificSpecialization" />
+      <End Role="ScholarshipsDetails" EntitySet="ScholarshipsDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Services_Main" Association="Self.FK_Services_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="Services" EntitySet="Services" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Services_ServicesScope" Association="Self.FK_Services_ServicesScope">
+      <End Role="ServicesScope" EntitySet="ServicesScope" />
+      <End Role="Services" EntitySet="Services" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Technicalreports_Main" Association="Self.FK_Technicalreports_Main">
+      <End Role="Main" EntitySet="Main" />
+      <End Role="Technicalreports" EntitySet="Technicalreports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Technicalreports_Year" Association="Self.FK_Technicalreports_Year">
+      <End Role="Year" EntitySet="Year" />
+      <End Role="Technicalreports" EntitySet="Technicalreports" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

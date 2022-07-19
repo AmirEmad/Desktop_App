@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8361D43D-8FCD-489F-8409-CEA60F880B86}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COMPUTERIZED_STATISTICAL_ROOM</RootNamespace>
+    <AssemblyName>COMPUTERIZED STATISTICAL ROOM</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="COMPUTERIZED_STATISTICAL_ROOMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="COMPUTERIZED_STATISTICAL_ROOMDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="COMPUTERIZED_STATISTICAL_ROOMDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="COMPUTERIZED_STATISTICAL_ROOMDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="COMPUTERIZED_STATISTICAL_ROOMDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="COMPUTERIZED_STATISTICAL_ROOMDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="COMPUTERIZED_STATISTICAL_ROOMDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="COMPUTERIZED_STATISTICAL_ROOMDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB\AcademicQualification.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Assignment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Award.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Book.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Case.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Citizenship.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Class.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\conferencePaperProceeding.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ConferenceType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Degree.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DissertationsSupervised.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DissertationsSupervisedType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\EditionalRole.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\EventAttended.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\EventsAttendedType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Funding.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Gender.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\GeneralSpecialization.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\HonorsAndAward.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\InvitedLecture.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\levedegreeType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\LevelDegree.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Main.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\MaritalState.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Occupation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\OffBuidling.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ProfessionalAffiliationMembership.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ProfessionalExperince.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ProfessionalExperinceType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Publication.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\PublicationsInReferredJournal.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\PublicationsType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Referee.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ScholarshipCase.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ScholarshipsDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\schoolardegree.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Service.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ServicesScope.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\society.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SpecificSpecialization.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Technicalreport.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Year.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\TechnicalreportsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\TechnicalreportsScreen.designer.cs">
+      <DependentUpon>TechnicalreportsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\AcademicQualificationsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\AcademicQualificationsScreen.Designer.cs">
+      <DependentUpon>AcademicQualificationsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddSociety.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\AddSociety.Designer.cs">
+      <DependentUpon>AddSociety.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AssignmentsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\AssignmentsScreen.Designer.cs">
+      <DependentUpon>AssignmentsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\BooksScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\BooksScreen.Designer.cs">
+      <DependentUpon>BooksScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\conferencePaperProceedingsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\conferencePaperProceedingsScreen.Designer.cs">
+      <DependentUpon>conferencePaperProceedingsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DissertationsSupervisedScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\DissertationsSupervisedScreen.Designer.cs">
+      <DependentUpon>DissertationsSupervisedScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\EventsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\EventsScreen.Designer.cs">
+      <DependentUpon>EventsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FundingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\FundingScreen.Designer.cs">
+      <DependentUpon>FundingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\HonorsAndAwardsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\HonorsAndAwardsScreen.Designer.cs">
+      <DependentUpon>HonorsAndAwardsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\InvitedLectureScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\InvitedLectureScreen.Designer.cs">
+      <DependentUpon>InvitedLectureScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\LevelDegreeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\LevelDegreeScreen.Designer.cs">
+      <DependentUpon>LevelDegreeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ProfessionalExperinceScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\ProfessionalExperinceScreen.Designer.cs">
+      <DependentUpon>ProfessionalExperinceScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\PublicationsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\PublicationsScreen.Designer.cs">
+      <DependentUpon>PublicationsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\PublicationsInReferredJournalsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\PublicationsInReferredJournalsScreen.Designer.cs">
+      <DependentUpon>PublicationsInReferredJournalsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\RefereesScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\RefereesScreen.Designer.cs">
+      <DependentUpon>RefereesScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ScholarshipsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\ScholarshipsScreen.Designer.cs">
+      <DependentUpon>ScholarshipsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Screens\TechnicalreportsScreen.resx">
+      <DependentUpon>TechnicalreportsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Screens\AcademicQualificationsScreen.resx">
+      <DependentUpon>AcademicQualificationsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AddSociety.resx">
+      <DependentUpon>AddSociety.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AssignmentsScreen.resx">
+      <DependentUpon>AssignmentsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\BooksScreen.resx">
+      <DependentUpon>BooksScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\conferencePaperProceedingsScreen.resx">
+      <DependentUpon>conferencePaperProceedingsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DissertationsSupervisedScreen.resx">
+      <DependentUpon>DissertationsSupervisedScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\EventsScreen.resx">
+      <DependentUpon>EventsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\FundingScreen.resx">
+      <DependentUpon>FundingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\HonorsAndAwardsScreen.resx">
+      <DependentUpon>HonorsAndAwardsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\InvitedLectureScreen.resx">
+      <DependentUpon>InvitedLectureScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\LevelDegreeScreen.resx">
+      <DependentUpon>LevelDegreeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ProfessionalExperinceScreen.resx">
+      <DependentUpon>ProfessionalExperinceScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\PublicationsScreen.resx">
+      <DependentUpon>PublicationsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\PublicationsInReferredJournalsScreen.resx">
+      <DependentUpon>PublicationsInReferredJournalsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\RefereesScreen.resx">
+      <DependentUpon>RefereesScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ScholarshipsScreen.resx">
+      <DependentUpon>ScholarshipsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet.xsc">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COMPUTERIZED_STATISTICAL_ROOMDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet.xss">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet1.xsc">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COMPUTERIZED_STATISTICAL_ROOMDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet1.xss">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet2.xsc">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COMPUTERIZED_STATISTICAL_ROOMDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet2.xss">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet3.xsc">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COMPUTERIZED_STATISTICAL_ROOMDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet3.xss">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet4.xsc">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COMPUTERIZED_STATISTICAL_ROOMDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet4.xss">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet5.xsc">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COMPUTERIZED_STATISTICAL_ROOMDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet5.xss">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet6.xsc">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COMPUTERIZED_STATISTICAL_ROOMDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet6.xss">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet7.xsc">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COMPUTERIZED_STATISTICAL_ROOMDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="COMPUTERIZED_STATISTICAL_ROOMDataSet7.xss">
+      <DependentUpon>COMPUTERIZED_STATISTICAL_ROOMDataSet7.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="DB\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Images\iconfinder_gnome-session-logout_28390.png" />
+    <Content Include="Images\iconfinder_house-home-main-menu-start-building_3643769.png" />
+    <Content Include="Images\pexels-gdtography-911738.jpg" />
+    <Content Include="Images\pexels-johannes-plenio-1103970.jpg" />
+    <Content Include="Images\pexels-sean-whang-804269.jpg" />
+    <Content Include="Images\Places-user-identity-icon.png" />
+    <None Include="Resources\iconfinder_Plus__Orange_34237.png" />
+    <None Include="Resources\iconfinder_logout_close_sign_out_exit_access_3994382.png" />
+    <None Include="Resources\User-Interface-Logout-icon.png" />
+    <None Include="Resources\add-icon.png" />
+    <None Include="Resources\Actions-go-next-icon.png" />
+    <None Include="Resources\iconfinder_ic_play_arrow_48px_352072.png" />
+    <None Include="Resources\Actions-go-previous-icon.png" />
+    <None Include="Resources\iconfinder_notification_error_48785.png" />
+    <None Include="Resources\iconfinder_UpdateTaskProgress-task-update-folder-progress_6071845.png" />
+    <None Include="Resources\iconfinder_Button White Check_58494.png" />
+    <None Include="Resources\تبوك.PNG" />
+    <None Include="Resources\iconfinder_home_353416.png" />
+    <None Include="Resources\iconfinder_lock_511942.png" />
+    <None Include="Resources\iconfinder_house-home-main-menu-start-building_3643769.png" />
+    <None Include="Resources\pexels-johannes-plenio-1103970.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="444eb346017849c7ad457b0953b5166c" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.AcademicQualification" Width="1.5" PointX="5.25" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Assignment" Width="1.5" PointX="5.25" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Award" Width="1.5" PointX="9" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Book" Width="1.5" PointX="8.25" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Case" Width="1.5" PointX="12" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Citizenship" Width="1.5" PointX="0.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Class" Width="1.5" PointX="3" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.conferencePaperProceeding" Width="1.5" PointX="8.25" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ConferenceType" Width="1.5" PointX="6" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Degree" Width="1.5" PointX="3" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DissertationsSupervised" Width="1.5" PointX="8.25" PointY="40.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DissertationsSupervisedType" Width="1.5" PointX="6" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EditionalRole" Width="1.5" PointX="9" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EventAttended" Width="1.5" PointX="5.25" PointY="42.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EventsAttendedType" Width="1.5" PointX="3" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Funding" Width="1.5" PointX="11.25" PointY="36.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Gender" Width="1.5" PointX="0.75" PointY="39.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GeneralSpecialization" Width="1.5" PointX="3" PointY="44" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.HonorsAndAward" Width="1.5" PointX="11.25" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.InvitedLecture" Width="1.5" PointX="5.25" PointY="64.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.levedegreeType" Width="1.5" PointX="9" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.LevelDegree" Width="1.5" PointX="11.25" PointY="40.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Main" Width="1.5" PointX="3" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MaritalState" Width="1.5" PointX="0.75" PointY="42.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Occupation" Width="1.5" PointX="0.75" PointY="36.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.OffBuidling" Width="1.5" PointX="0.75" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ProfessionalAffiliationMembership" Width="1.5" PointX="5.25" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ProfessionalExperince" Width="1.5" PointX="8.25" PointY="44" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ProfessionalExperinceType" Width="1.5" PointX="6" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Publication" Width="1.5" PointX="11.25" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PublicationsInReferredJournal" Width="1.5" PointX="11.25" PointY="44.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PublicationsType" Width="1.5" PointX="9" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Referee" Width="1.5" PointX="5.25" PointY="85.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ScholarshipCase" Width="1.5" PointX="12" PointY="49" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ScholarshipsDetail" Width="1.5" PointX="14.25" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.schoolardegree" Width="1.5" PointX="12" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Service" Width="1.5" PointX="14.25" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ServicesScope" Width="1.5" PointX="12" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.society" Width="1.5" PointX="3" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SpecificSpecialization" Width="1.5" PointX="3" PointY="46.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Technicalreport" Width="1.5" PointX="8.25" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Year" Width="1.5" PointX="6" PointY="25.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_AcademicQualifications_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_AcademicQualifications_Degree" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_AcademicQualifications_GeneralSpecialization" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_AcademicQualifications_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_AcademicQualifications_SpecificSpecialization" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Assignments_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_HonorsAndAwards_Award" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Books_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Books_Year" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ScholarshipsDetails_Case" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Main_Citizenship" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_conferencePaperProceedings_ConferenceType" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_conferencePaperProceedings_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_conferencePaperProceedings_Year" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DissertationsSupervised_DissertationsSupervisedType" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DissertationsSupervised_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DissertationsSupervised_Year" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Publications_EditionalRole1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_EventAttended_EventsAttendedType" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_EventAttended_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_EventAttended_Year" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Funding_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Funding_Year" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Main_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ScholarshipsDetails_GeneralSpecialization" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_HonorsAndAwards_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_HonorsAndAwards_Year" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_InvitedLecture_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_LevelDegree_levedegreeType" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_LevelDegree_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Main_MaritalState" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Main_Occupation" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Main_OffBuidling" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ProfessionalAffiliationMembership_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ProfessionalExperince_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Publications_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_PublicationsInReferredJournals_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Referees_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ScholarshipsDetails_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Services_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Technicalreports_Main" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ProfessionalExperince_Occupation" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ProfessionalAffiliationMembership_society" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ProfessionalExperince_ProfessionalExperinceType" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Publications_PublicationsType1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_PublicationsInReferredJournals_Year" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ScholarshipsDetails_ScholarshipCase" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ScholarshipsDetails_schoolardegree" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ScholarshipsDetails_SpecificSpecialization" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Services_ServicesScope" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Technicalreports_Year" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
